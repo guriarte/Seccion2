@@ -9,7 +9,7 @@ using namespace std;
 
 void Seccion2Ejercicio1()
 {
-    int primo1, primo2, n, phi;
+    int primo1, primo2, n, phi, exponente, clavePrivada;
 
     do
     {
@@ -20,6 +20,10 @@ void Seccion2Ejercicio1()
 
     n = primo1*primo2;
 
-    phi = (primo1-1)*(primo2-1);                        //calculo el phi(n)
+    phi = generarPhi(primo1, primo2);                   //calculo el phi(n)
+
+    exponente = elegirExponente(phi);
+
+    clavePrivada = generarClavePrivada(phi, exponente);
 }
 

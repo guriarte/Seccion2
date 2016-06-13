@@ -10,14 +10,13 @@ int getNumeroPrimo(int min, int max)                    //funcion que devuelve u
     {
         numeroPrimo = generarNumeroRandomRango(min, max);
 
-    }while(!(esPrimo(numeroPrimo)));
+    }while (!(esPrimo(numeroPrimo)));
 
     return numeroPrimo;
 }
 
 int generarNumeroRandomRango(int min, int max)          //funcion que devuelve un numero random entre determinado rango
 {
-    srand(time(0));
     int n = max - min + 1;
     int resto = RAND_MAX % n;
     int x;
@@ -32,8 +31,8 @@ bool esPrimo(int numero)                                //funcion que devuelve 1
 {
     int i;
 
-    for(i = 2 ; i < numero/2 ; i++)
-        if(!(numero%i))
+    for (i = 2 ; i < numero/2 ; i++)
+        if (!(numero%i))
             return 0;
 
     return 1;
