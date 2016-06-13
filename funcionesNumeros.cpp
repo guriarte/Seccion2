@@ -1,5 +1,4 @@
-#include <iostream>
-#include <ctime>
+#include "header.h"
 
 using namespace std;
 
@@ -7,17 +6,18 @@ int getNumeroPrimo(int min, int max)                    //funcion que devuelve u
 {
     int i, numeroPrimo;
 
-    srand(time(0));
-
     do
     {
         numeroPrimo = generarNumeroRandomRango(min, max);
 
-    }while(!(esPrimo(numeroPrimo));
+    }while(!(esPrimo(numeroPrimo)));
+
+    return numeroPrimo;
 }
 
 int generarNumeroRandomRango(int min, int max)          //funcion que devuelve un numero random entre determinado rango
 {
+    srand(time(0));
     int n = max - min + 1;
     int resto = RAND_MAX % n;
     int x;
@@ -32,9 +32,9 @@ bool esPrimo(int numero)                                //funcion que devuelve 1
 {
     int i;
 
-    for(i = 2 ; i < numero ; i++)
+    for(i = 2 ; i < numero/2 ; i++)
         if(!(numero%i))
-            return 1;
+            return 0;
 
-    return 0;
+    return 1;
 }

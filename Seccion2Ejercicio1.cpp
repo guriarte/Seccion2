@@ -3,7 +3,7 @@ encriptación simples (en caso de no querer usar el RSA); donde dado un programa
 muestre al mismo encriptado, con la opción de recuperar el mensaje original.
 */
 
-#include <iostream>
+#include "header.h"
 
 using namespace std;
 
