@@ -1,18 +1,18 @@
 #include "header.h"
 using namespace std;
 
-int generarPhi(int primo1, int primo2)
+long int generarPhi(long int primo1, long int primo2)
 {
     return (primo1-1)*(primo2-1);
 }
 
 
-int generarClavePrivada(int phi, int exponente)
+long int generarClavePrivada(long int phi, long int exponente)
 {
     return (2*phi+1)/exponente;
 }
 
-int elegirExponente(int phi)
+long int elegirExponente(long int phi)
 {
     int i;
 
@@ -23,7 +23,7 @@ int elegirExponente(int phi)
     return 0;
 }
 
-long int encriptar(int clavePublica, int exponente, int mensaje)
+long int encriptar(long int clavePublica, long int exponente, long int mensaje)
 {
     long int potencia;
 
@@ -32,7 +32,7 @@ long int encriptar(int clavePublica, int exponente, int mensaje)
 
 }
 
-long int desencriptar(int clavePrivada, int clavePublica, int mensaje)
+long int desencriptar(long int clavePrivada, long int clavePublica, long int mensaje)
 {
     long int potencia;
 

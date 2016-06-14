@@ -6,11 +6,11 @@
 enum letras {a = 1, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u ,v ,w, x, y, z};
 
 void Seccion2Ejercicio1();
-int getNumeroPrimo(int , int );
-int generarNumeroRandomRango(int , int );
-bool esPrimo(int );
-int elegirExponente(int );
-int generarClavePrivada(int , int );
-int generarPhi(int , int );
-long int encriptar(int , int , int );
-long int desencriptar(int , int , int );
+long int getNumeroPrimo(long int , long int );
+long int generarNumeroRandomRango(long int , long int );
+bool esPrimo(long int );
+long int elegirExponente(long int );
+long int generarClavePrivada(long int , long int );
+long int generarPhi(long int , long int );
+long int encriptar(long int, long int, long int);
+long int desencriptar(long int, long int, long int);
