@@ -12,5 +12,5 @@ bool esPrimo(int );
 int elegirExponente(int );
 int generarClavePrivada(int , int );
 int generarPhi(int , int );
-int encriptar(int , int , int );
-int desencriptar(int , int , int );
+long int encriptar(int , int , int );
+long int desencriptar(int , int , int );

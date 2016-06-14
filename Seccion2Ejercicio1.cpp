@@ -9,7 +9,7 @@ using namespace std;
 
 void Seccion2Ejercicio1()
 {
-    int primo1, primo2, clavePublica, exponente, clavePrivada, mensaje=10, phi;
+    long int primo1, primo2, clavePublica, exponente, clavePrivada, mensaje=10, phi;
 
     srand(time(0));
 

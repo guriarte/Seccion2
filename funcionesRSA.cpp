@@ -23,7 +23,7 @@ int elegirExponente(int phi)
     return 0;
 }
 
-int encriptar(int clavePublica, int exponente, int mensaje)
+long int encriptar(int clavePublica, int exponente, int mensaje)
 {
     long int potencia;
 
@@ -32,7 +32,7 @@ int encriptar(int clavePublica, int exponente, int mensaje)
 
 }
 
-int desencriptar(int clavePrivada, int clavePublica, int mensaje)
+long int desencriptar(int clavePrivada, int clavePublica, int mensaje)
 {
     long int potencia;
 
