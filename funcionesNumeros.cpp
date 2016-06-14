@@ -1,10 +1,8 @@
 #include "header.h"
 
-using namespace std;
-
 int getNumeroPrimo(int min, int max)                    //funcion que devuelve un numero primo entre determinado rango
 {
-    int i, numeroPrimo;
+    int numeroPrimo;
 
     do
     {

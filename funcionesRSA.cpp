@@ -1,5 +1,4 @@
 #include "header.h"
-
 using namespace std;
 
 int generarPhi(int primo1, int primo2)
@@ -20,4 +19,24 @@ int elegirExponente(int phi)
     for (i = 3 ; i < 100 ; i++)
         if (phi%i && esPrimo(i))
             return i;
+
+    return 0;
+}
+
+int encriptar(int clavePublica, int exponente, int mensaje)
+{
+    long int potencia;
+
+    potencia = pow(mensaje, exponente);
+    return potencia%(long)clavePublica;
+
+}
+
+int desencriptar(int clavePrivada, int clavePublica, int mensaje)
+{
+    long int potencia;
+
+    potencia = pow(mensaje, clavePrivada);
+    return potencia%(long)clavePublica;
+
 }
