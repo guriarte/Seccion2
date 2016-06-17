@@ -1,18 +1,18 @@
 #include "header.h"
 using namespace std;
 
-long int generarPhi(long int primo1, long int primo2)
+unsigned generarPhi(unsigned primo1, unsigned primo2)
 {
     return (primo1-1)*(primo2-1);
 }
 
 
-long int generarClavePrivada(long int phi, long int exponente)
+unsigned generarClavePrivada(unsigned phi, unsigned exponente)
 {
     return (2*phi+1)/exponente;
 }
 
-long int elegirExponente(long int phi)
+unsigned elegirExponente(unsigned phi)
 {
     int i;
 
@@ -23,20 +23,21 @@ long int elegirExponente(long int phi)
     return 0;
 }
 
-long int encriptar(long int clavePublica, long int exponente, long int mensaje)
+unsigned encriptar(unsigned clavePublica, unsigned exponente, unsigned mensaje)
 {
-    long int potencia;
+    //unsigned potencia;
 
-    potencia = pow(mensaje, exponente);
-    return potencia%(long)clavePublica;
+    //potencia = pow(mensaje, exponente);
+    //return potencia%(long)clavePublica;
+    return powerMod(mensaje, exponente, clavePublica);
 
 }
 
-long int desencriptar(long int clavePrivada, long int clavePublica, long int mensaje)
+unsigned desencriptar(unsigned clavePrivada, unsigned clavePublica, unsigned mensaje)
 {
-    long int potencia;
+    //unsigned potencia;
 
-    potencia = pow(mensaje, clavePrivada);
-    return potencia%(long)clavePublica;
-
+    //potencia = pow(mensaje, clavePrivada);
+    //return potencia%(long)clavePublica;
+    return powerMod(mensaje, clavePrivada, clavePublica);
 }

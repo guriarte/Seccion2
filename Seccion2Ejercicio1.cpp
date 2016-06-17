@@ -9,14 +9,16 @@ using namespace std;
 
 void Seccion2Ejercicio1()
 {
-    long int primo1, primo2, clavePublica, exponente, clavePrivada, mensaje=10, phi;
+    unsigned primo1, primo2, clavePublica, exponente, clavePrivada, mensaje=10, phi;
+
+    unsigned test;
 
     srand(time(0));
 
     do
     {
-        primo1 = getNumeroPrimo(100, 900);              //Obtengo los 2 primos factores de n
-        primo2 = getNumeroPrimo(100, 900);
+        primo1 = getNumeroPrimo(2, 20);              //Obtengo los 2 primos factores de n
+        primo2 = getNumeroPrimo(2, 20);
 
     }while(primo1 == primo2);
 
@@ -36,6 +38,10 @@ void Seccion2Ejercicio1()
     cout << "El mensaje encriptado es: " << mensaje << endl;
     mensaje = desencriptar(clavePrivada, clavePublica, mensaje);
     cout << "El mensaje desencriptado es: " << mensaje << endl;
+
+    test = powerMod(3232, 66, 9);
+
+    cout << "Resto: " << test << endl;
 
 }
 

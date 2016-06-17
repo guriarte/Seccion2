@@ -1,8 +1,8 @@
 #include "header.h"
 
-long int getNumeroPrimo(long int min, long int max)                    //funcion que devuelve un numero primo entre determinado rango
+unsigned getNumeroPrimo(unsigned min, unsigned max)                    //funcion que devuelve un numero primo entre determinado rango
 {
-    long int numeroPrimo;
+    unsigned numeroPrimo;
 
     do
     {
@@ -13,7 +13,7 @@ long int getNumeroPrimo(long int min, long int max)                    //funcion
     return numeroPrimo;
 }
 
-long int generarNumeroRandomRango(long int min, long int max)          //funcion que devuelve un numero random entre determinado rango
+unsigned generarNumeroRandomRango(unsigned min, unsigned max)          //funcion que devuelve un numero random entre determinado rango
 {
     int n = max - min + 1;
     int resto = RAND_MAX % n;
@@ -25,13 +25,23 @@ long int generarNumeroRandomRango(long int min, long int max)          //funcion
     return min + x % n;
 }
 
-bool esPrimo(long int numero)                                //funcion que devuelve 1 si numero es primo, sino devuelve 0
+bool esPrimo(unsigned numero)                                //funcion que devuelve 1 si numero es primo, sino devuelve 0
 {
-    int i;
+    unsigned i;
 
     for (i = 2 ; i < numero/2 ; i++)
         if (!(numero%i))
             return 0;
 
     return 1;
+}
+
+unsigned powerMod(unsigned base, unsigned exponente, unsigned modulo)
+{
+    unsigned resto = base;
+
+    for(int i = 1 ; i < exponente ; i *= 2)
+        resto = (int)pow(resto, 2) % (int)modulo;
+
+    return resto;
 }
