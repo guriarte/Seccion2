@@ -15,3 +15,6 @@ unsigned generarPhi(unsigned , unsigned );
 unsigned encriptar(unsigned, unsigned, unsigned);
 unsigned desencriptar(unsigned, unsigned, unsigned);
 unsigned powerMod(unsigned , unsigned , unsigned );
+unsigned elegirExponenteE(unsigned, unsigned);
+unsigned encriptarNoe(unsigned,unsigned,unsigned);
+unsigned desencriptarNoe(unsigned,unsigned,unsigned);

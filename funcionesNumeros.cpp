@@ -29,7 +29,7 @@ bool esPrimo(unsigned numero)                                //funcion que devue
 {
     unsigned i;
 
-    for (i = 2 ; i < numero/2 ; i++)
+    for (i = 2 ; i <= numero/2 ; i++)
         if (!(numero%i))
             return 0;
 
@@ -40,8 +40,8 @@ unsigned powerMod(unsigned base, unsigned exponente, unsigned modulo)
 {
     unsigned resto = base;
 
-    for(int i = 1 ; i < exponente ; i *= 2)
-        resto = (int)pow(resto, 2) % (int)modulo;
+    //for(int i = 1 ; i < exponente ; i *= 2)
+    //    resto = (int)pow(resto, 2) % (int)modulo;
 
     return resto;
 }
